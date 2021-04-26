@@ -95,6 +95,7 @@ Widget buildPhone1() {
 Widget buildPhone2() {
   return Card(
     child: ListTile(
+      leading: Text(""),
       title: Text('330-803-3391'),
       subtitle: Text('other'),
       trailing: Icon(Icons.message),
