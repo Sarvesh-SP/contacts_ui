@@ -30,24 +30,16 @@ class MyHomePage extends StatelessWidget {
           Column(
             children: <Widget>[
               Container(
-                  width: double.infinity,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage(currentUser.imageUrl),
-                  )),
+                backgroundImage: AssetImage(currentUser.imageUrl),
+              )),
               Text('Sarvesh SP'),
               Divider(color: Colors.red),
               Container(
-                margin: const EdgeInsets.only(top: 8, bottom: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    buildCallButton(),
-                    buildTextButton(),
-                    buildVideoButton(),
-                    buildEmailButton(),
-                    buildDirectionButton(),
-                    buildPayButton()
-                  ],
+                child: Theme(
+                  data: ThemeData(
+                      iconTheme: IconThemeData(color: Colors.orange[600])),
+                  child: profileAction(),
                 ),
               ),
               Divider(
@@ -57,7 +49,10 @@ class MyHomePage extends StatelessWidget {
               buildPhone2(),
               Divider(
                 color: Colors.purple,
-              )
+              ),
+              email(),
+              Divider(color: Colors.blue),
+              address()
             ],
           )
         ],

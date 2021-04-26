@@ -5,7 +5,6 @@ Widget buildCallButton() {
     children: <Widget>[
       IconButton(
         icon: Icon(Icons.call),
-        color: Colors.green,
         onPressed: () {},
       ),
       Text('Call')
@@ -18,7 +17,6 @@ Widget buildTextButton() {
     children: <Widget>[
       IconButton(
         icon: Icon(Icons.message),
-        color: Colors.green,
         onPressed: () {},
       ),
       Text('Text')
@@ -31,7 +29,6 @@ Widget buildVideoButton() {
     children: <Widget>[
       IconButton(
         icon: Icon(Icons.video_call),
-        color: Colors.green,
         onPressed: () {},
       ),
       Text('Video')
@@ -44,7 +41,6 @@ Widget buildEmailButton() {
     children: <Widget>[
       IconButton(
         icon: Icon(Icons.mail),
-        color: Colors.green,
         onPressed: () {},
       ),
       Text('Email')
@@ -56,8 +52,7 @@ Widget buildDirectionButton() {
   return Column(
     children: <Widget>[
       IconButton(
-        icon: Icon(Icons.location_pin),
-        color: Colors.green,
+        icon: Icon(Icons.directions),
         onPressed: () {},
       ),
       Text('Directions')
@@ -70,7 +65,6 @@ Widget buildPayButton() {
     children: <Widget>[
       IconButton(
         icon: Icon(Icons.payment),
-        color: Colors.green,
         onPressed: () {},
       ),
       Text('Pay')
@@ -99,6 +93,44 @@ Widget buildPhone2() {
       title: Text('330-803-3391'),
       subtitle: Text('other'),
       trailing: Icon(Icons.message),
+    ),
+  );
+}
+
+Widget email() {
+  return Card(
+    child: ListTile(
+      leading: Icon(Icons.mail),
+      title: Text('sarvesh@gmail.com'),
+      subtitle: Text('work'),
+    ),
+  );
+}
+
+Widget address() {
+  return Card(
+    child: ListTile(
+      leading: Icon(Icons.location_on),
+      title: Text('234 Sunset St, Udupi'),
+      subtitle: Text('home'),
+      trailing: Icon(Icons.directions),
+    ),
+  );
+}
+
+Widget profileAction() {
+  return Container(
+    margin: const EdgeInsets.only(top: 8, bottom: 8),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        buildCallButton(),
+        buildTextButton(),
+        buildVideoButton(),
+        buildEmailButton(),
+        buildDirectionButton(),
+        buildPayButton()
+      ],
     ),
   );
 }
