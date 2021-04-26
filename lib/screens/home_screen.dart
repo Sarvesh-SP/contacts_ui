@@ -54,7 +54,10 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.red,
               ),
               buildPhone1(),
-              buildPhone2()
+              buildPhone2(),
+              Divider(
+                color: Colors.purple,
+              )
             ],
           )
         ],
