@@ -101,7 +101,7 @@ Widget email() {
   return Card(
     child: ListTile(
       leading: Icon(Icons.mail),
-      title: Text('sarvesh@gmail.com'),
+      title: Text('Anna@gmail.com'),
       subtitle: Text('work'),
     ),
   );
@@ -111,7 +111,7 @@ Widget address() {
   return Card(
     child: ListTile(
       leading: Icon(Icons.location_on),
-      title: Text('234 Sunset St, Udupi'),
+      title: Text('234 Sunset St, NY'),
       subtitle: Text('home'),
       trailing: Icon(Icons.directions),
     ),
